@@ -1,8 +1,16 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-.hero {
-
+.hero{
+    height: 100vh;
+    /*
+        The line below gives the background a 'tint' so that the text on top is easier to read.
+    */
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(assets/capsule.jpeg); 
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
 }
