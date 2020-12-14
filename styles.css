@@ -14,6 +14,7 @@
     overflow-x: hidden;
     position: relative;
 }
+/* Style rules for the navigation bar*/
 .nav-bar {
     display: flex;
     padding: 40px 120px;
@@ -34,7 +35,7 @@
     padding: 8px 25px;
 }
 .nav-links ul a{
-    color: #fff;
+    color: rgb(233, 4, 4);
     text-decoration: none;
     font-size: 13px;
 }
@@ -60,6 +61,8 @@
 .nav-links .btn{
     float: right;
 }
+
+/*Style rules for the site's banner*/
 .banner-title {
     margin: 40px 130px;
     color: #fff
@@ -71,6 +74,7 @@
 .banner-title h1 span {
     color: red;
 }
+/*Style rules for the side-bar*/
 .vertical-bar {
     height: 100%;
     background: rgb(0, 0, 0);
@@ -106,4 +110,70 @@
     border: 1px solid rgb(255, 0, 0);
     border-radius: 50%;
     cursor: pointer;
+}
+.nav-bar .fas {
+    display: none;
+}
+/*
+    Below is a media query that styles certain aspects of the page based upon the size of the display
+    a user is viewing the page with.
+*/
+@media (max-width: 700px) {
+    /* Removes the vertical-bar when the page is 700px wide or less */
+    .vertical-bar {
+        display: none;
+    }
+    /* Changes the margins of the banner-title container to better suit a smaller screen */
+    .banner-title {
+       margin: 80px 40px;
+    }
+    /*Decreases the size of the banner's text*/
+    .banner-title h1 {
+        font-size: 50px;
+    }
+    /*
+    I shrunk the padding within the navigation bar to have it fit better
+    for further styling.
+     */
+    .nav-bar {
+        padding: 10px 30px;
+    }
+    /**/
+    .fas-bars {
+       position: absolute;
+       right: 10px;
+       top: 10px;
+    }
+    .nav-bar .fas{
+        display: block;
+        color: #fff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+     }
+     .nav-links {
+        height: 100vh;
+        width: 200px;
+        background: #000 ;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+     }
+     .nav-links ul a {
+         display: block;
+     }
+     .nav-links .btn {
+        float: none;
+        margin-left: 25px;
+        margin-top: 10px;
+
+     }
+     .nav-links .btn:hover {
+         background-color: red;
+         color: white;
+     }
+        
 }

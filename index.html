@@ -13,7 +13,8 @@
             <div class="nav-logo">
                 <img src="assets/capsule-logo.png" alt="">
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
+                <i class="fas fa-window-close" onclick="closeMenu()"></i>
                 <ul>
                     <a href="index.html"><li>HOME</li></a>
                     <a href="#"><li>ABOUT</li></a>
@@ -21,6 +22,11 @@
                 </ul>
                 <button type="button" class="btn">SIGN UP FOR OUR NEWS LETTER</button>
             </div>
+
+            <!-- Creates a small icon with three bars -->
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+
+
         </div>
         <div class="banner-title">
             <h1>CAPSULE <span>NINE</span> <br> 'STAY WEIRD'</h1>
@@ -38,7 +44,15 @@
                 <i class="fab fa-twitch"></i>
             </div>
         </div>
-        <div><p>Example text</p></div>
     </div>
+    <script>
+        var show = document.getElementById("nav-links");
+        function showMenu() {
+            show.style.right = "0";
+        }
+        function closeMenu() {
+            show.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
