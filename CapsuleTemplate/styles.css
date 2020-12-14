@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.hero {
+    height: 100vh;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+    background-color: rgb(255, 255, 255);
+}
+.nav-logo {
+    height: auto;
+    flex-basis: auto;
+}
+.nav-logo img {
+    margin-top: 0.4rem;
+}
+.nav-links {
+    display: flex;
+    flex: 1 1 40vw;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-links li {
+    list-style: none;
+    flex: 1 1 40vw;
+    text-align: center;
+}
+.nav-links li a {
+    text-decoration: none;
+        font-style: italic;
+    font-weight: bold;
+    color: rgb(192, 8, 8);
+}
+.nav-links li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: rgb(206, 2, 2);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links li a:hover::after {
+    width: 50%;
+}
+.btn {
+    background-color: white;
+    flex: 0.5 1 10vw;
+    padding: 0.5rem 0.5rem;
+    margin-right: 0.7rem;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: red;
+    color:white;
+    transition: .5s;
+}
+.banner-title {
+    margin: 2rem 2rem;
+    display: flex;
+    height: 90vh;
+}
+.banner-text p {
+    color: white;
+    font-size: 8rem;
+}
+.banner-text p span {
+    color: red;
+}
